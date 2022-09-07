@@ -19,6 +19,10 @@ public class Usuario implements Serializable {
 	private String email;
 	private String phone;
 	private String password;
+	
+	public Usuario() {
+		
+	}
 
 	public Usuario(Long id, String name, String email, String phone, String password) {
 		super();
