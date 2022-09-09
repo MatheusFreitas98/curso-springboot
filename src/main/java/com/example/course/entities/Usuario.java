@@ -12,8 +12,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
-@Table(name = "tb_order")
+@Table(name = "tb_order") 
 public class Usuario implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
@@ -25,6 +27,7 @@ public class Usuario implements Serializable {
 	private String phone;
 	private String password;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "client")
 	private List<Order> orders = new ArrayList<>();
 	
